@@ -1,4 +1,4 @@
-# ci_inlamning1
+# CI_inlamning1
 ## Inlämningsuppgift 1:
 Vad som skall evalueras
 Efter genomförd kurs ska den studerande kunna:
