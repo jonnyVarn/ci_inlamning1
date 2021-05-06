@@ -10,7 +10,7 @@ Färdigheter:
 ### 4.Använda processer och metoder för tillämpning av Continuous Integration
 Introduktion
 ----------------
-Den här inlämningsuppgiften består av två delar. 
+##### Den här inlämningsuppgiften består av två delar. 
 Med den här inlämningsuppgiften skall du skriva en rapport där du 
 dokumenterar hur du tänkt igenom de praktiska momenten. 
 Målet med inlämningsuppgiften är att få igång en CI kedja med hjälp av diverse verktyg innan deadline den 7de maj kl 
