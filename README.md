@@ -25,6 +25,7 @@ Detta skall ske regelbundet dvs så fort något nytt har implementerats.
 • Python
 • Pytest
 • Flake8
+-------------
 Rapport krav:
 • Rapporten skall innehålla verktygen du arbetat med
 • Hur du använde dom under uppgiftensgång
