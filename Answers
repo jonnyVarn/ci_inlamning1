@@ -1,0 +1,14 @@
+# 1: De olika delarna i Continuous Integration:
+Bygg, Test
+Kod finns i gemensamma arkiv exempelvis på github ofta i olika branches för development, testning, main, olika funktionalitet.
+Varje ändring av koden testas direkt.
+
+2.Beskriva testing och enhetstester inom området
+
+3.Redogöra för CI/CD
+CI/CD Continous Integration/ Continous{Deployment, Delivery}
+CI/CD Automatiserar byggande, testande och utvecklings stegen i mjukvaruutveckling och reducerar tidsåtgång för att utveckla mjukvara.
+
+
+
+
