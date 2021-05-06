@@ -13,12 +13,12 @@ Introduktion
 ##### Den här inlämningsuppgiften består av två delar. Med den här inlämningsuppgiften skall du skriva en rapport där du dokumenterar hur du tänkt igenom de praktiska momenten. Målet med inlämningsuppgiften är att få igång en CI kedja med hjälp av diverse verktyg innan deadline den 7de maj kl 23:55
 ----------------
 Krav:
-Skapa upp en python applikation antingen med Flask eller valfri kod som skall finns på Github. Detta repo skall ha två 
-branches; Main, dev
+---------------
+###### Skapa upp en python applikation antingen med Flask eller valfri kod som skall finns på Github. Detta repo skall ha två branches; Main, dev
 Det skall finnas minst två stycken enhetstester och en lint installerad
 Ett CI verktyg skall implementeras för att hjälpa oss med vår pull requests
-All utveckling sker mot dev branchen och skall mergas in mot main med hjälp av en manuell pullrequest . Detta skall ske 
-regelbundet dvs så fort något nytt har implementerats.
+All utveckling sker mot dev branchen och skall mergas in mot main med hjälp av en manuell pullrequest . 
+Detta skall ske regelbundet dvs så fort något nytt har implementerats.
 • Github
 • CircleCI
 • Python
