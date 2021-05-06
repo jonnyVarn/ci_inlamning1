@@ -4,5 +4,9 @@ Sedan försöker jag komma på ett usecase för python med flask.
 Jag clonar mitt skapade repo till desktop för att försöka få någonting gjort.
 git clone https://github.com/jonnyVarn/ci_inlamning1/ och cd ci_inlamning1.
 Jag bestämmer mig för att börja med en Dockerfile och stöter såklart på lite problem med dockerDesktop.
+Så jag stänger ner docker engiene och startar utan resultat och uppgraderar till 3.3.2 då verkar det fungera.
 Jag använder alpine Latest så From: Alpine: Latest
-
+jag testar först i terminalen
+docker run -ti alpine:latest
+python --version finns inte så jag lägger till apk update && apk add python3 py-pip py-flask i dockerfile
+sedan gör jag en git add * git commit -m "added Dockerfile" git push
