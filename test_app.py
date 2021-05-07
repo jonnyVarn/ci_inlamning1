@@ -7,4 +7,4 @@ class AppTester():
     assert t1.status_code == 200, 'No Work'
 
     t2 = app.testar
-    assert t2 == "ok"
+    assert t2 == "ok", 'working'
