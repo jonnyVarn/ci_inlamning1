@@ -40,3 +40,35 @@ pytest -v
 
 Exited with code exit status 1
 CircleCI received exit code 1
+
+fortsätter krångla pip8 problem avklarade i app.py men test_app.py genererar
+#!/bin/sh -eo pipefail
+flake8  --statistics
+pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /root/repo
+collecting ... collected 0 items / 1 error                                                    
+
+==================================== ERRORS ====================================
+_________________________ ERROR collecting test_app.py _________________________
+ImportError while importing test module '/root/repo/test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test_app.py:1: in <module>
+    import app
+app.py:5: in <module>
+    from flask import Response, request, Flask
+E   ModuleNotFoundError: No module named 'flask'
+=========================== short test summary info ============================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.11s ===============================
+
+Exited with code exit status 2
+CircleCI received exit code 2
+
+hm.
