@@ -20,4 +20,3 @@ jobs:
           command: |
             flake8  --statistics
             pytest -v
-            unittest -v
