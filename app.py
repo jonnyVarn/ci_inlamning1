@@ -21,10 +21,11 @@ def containerRunning():
     return f'its working {hostname} \n'
     
 @app.route('/headers')
-    def headers():
-        for header in request.headers:
-            result = result + f'{header[0]}:\t{header[1]}\n'
-            return Response(result, mimetype='text/plain')
+def headers():
+    result=""
+    for header in request.headers:
+        result = result + f'{header[0]}:\t{header[1]}\n'
+        return Response(result, mimetype='text/plain')
 
 
 if __name__ == "__main__":
