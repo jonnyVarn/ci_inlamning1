@@ -22,7 +22,7 @@ def containerRunning():
     
 @app.route('/headers')
 def headers():
-    result=""
+    result = ""
     for header in request.headers:
         result = result + f'{header[0]}:\t{header[1]}\n'
         return Response(result, mimetype='text/plain')
