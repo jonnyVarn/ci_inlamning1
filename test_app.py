@@ -1,2 +1,2 @@
 import app as AppTester
-assert AppTester.testar == "ok"
+assert str.find(AppTester.testar) == "ok"
