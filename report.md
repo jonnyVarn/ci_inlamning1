@@ -10,3 +10,5 @@ jag testar först i terminalen
 docker run -ti alpine:latest
 python --version finns inte så jag lägger till apk update && apk add python3 py-pip py-flask i dockerfile
 sedan gör jag en git add * git commit -m "added Dockerfile" git push
+Så jag har gjort en dockerfile och någonting meningslöst i flask som visar kontainer id och /headers om den är ok kan användas för test senare
+Nu går jag in på circleCi och Set Up Project ci_inlamning1 det genereas ett yml jag får tänka lite på det så jag gör en test_app.py sålänge.

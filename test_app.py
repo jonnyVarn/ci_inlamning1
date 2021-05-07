@@ -1,6 +1,7 @@
 import app
 import unittest
 
+
 class AppTester(unittest.TestCase):
 
     def setUp(self):
