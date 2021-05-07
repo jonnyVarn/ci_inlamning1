@@ -2,8 +2,7 @@
 # import subprocess
 # from flask import render_template
 import socket
-import flask
-from flask import Response, request
+from flask import Response, request, Flask
 
 # from flask_api import status
 
