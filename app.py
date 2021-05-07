@@ -2,7 +2,7 @@
 # import subprocess
 # from flask import render_template
 import socket
-from flask import Response, Flask
+from flask import Response,Request, Flask
 
 # from flask_api import status
 
@@ -23,7 +23,7 @@ def container():
 @app.route('/headers')
 def headers():
     result = ""
-    for header in request.headers:
+    for header in Request.headers:
         result = result + f'{header[0]}:\t{header[1]}\n'
     return Response(result, mimetype='text/plain')
 
