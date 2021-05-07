@@ -6,13 +6,18 @@ from flask import Flask
 from flask import Response, request
 # from flask_api import status
 
+
+
 app = Flask(__name__)
+
+
+hostname = socket.gethostname()
+
 
 @app.route('/', methods=['POST', 'GET'])
 def containerRunning():
-#    hostname = socket.gethostname()
-#    return f'its working {hostname}'
-    return "pep8 suger fett"
+    return f'its working {hostname}'
+    
     
 # @app.route('/headers')
 # def headers():
