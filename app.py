@@ -11,9 +11,8 @@ app = Flask(__name__)
 hostname = socket.gethostname()
 
 
-
 @app.route('/test')
-    def test():
+def testar():
     return 'ok'
 
 @app.route('/', methods=['POST', 'GET'])
