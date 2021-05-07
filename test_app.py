@@ -3,7 +3,7 @@ import app
 
 
 class AppTester():
-     t2 = app.testar
+    t2 = app.testar
     assert t2 == "ok", 'working'
 
 #    t1 = requests.get("http://127.0.0.1:80")
