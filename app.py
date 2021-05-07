@@ -9,8 +9,6 @@ from flask import Response, request
 
 
 app = Flask(__name__)
-
-
 hostname = socket.gethostname()
 
 
@@ -23,7 +21,7 @@ def containerRunning():
 def headers():
     result = ""
     for header in request.headers:
-    result = result + f'{header[0]}:\t{header[1]}\n'
+        result = result + f'{header[0]}:\t{header[1]}\n'
     return Response(result, mimetype='text/plain')
 
 
