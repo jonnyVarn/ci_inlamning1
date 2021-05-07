@@ -147,3 +147,50 @@ ERROR test_app.py - requests.exceptions.ConnectionError: HTTPConnectionPool(h...
 
 Exited with code exit status 2
 CircleCI received exit code 2
+
+mina tester fungerar inte pep8 verkar fungera..
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+#!/bin/sh -eo pipefail
+flake8  --statistics
+pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /root/repo
+collecting ... collected 0 items / 1 error                                                    
+
+==================================== ERRORS ====================================
+_________________________ ERROR collecting test_app.py _________________________
+test_app.py:2: in <module>
+    assert AppTester.testar == "ok"
+E   AssertionError: assert <function testar at 0x7fa815de1c10> == 'ok'
+E    +  where <function testar at 0x7fa815de1c10> = <module 'app' from '/root/repo/app.py'>.testar
+=========================== short test summary info ============================
+ERROR test_app.py - AssertionError: assert <function testar at 0x7fa815de1c10...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.30s ===============================
+
+Exited with code exit status 2
+CircleCI received exit code 2
+
