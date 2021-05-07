@@ -1,5 +1,5 @@
 import app
-import requests
+# import requests
 
 
 class AppTester():
