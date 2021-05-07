@@ -2,13 +2,13 @@
 # import subprocess
 # from flask import render_template
 import socket
-from flask import Flask, 
+from flask import Flask
 from flask import Response, request
 # from flask_api import status
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods = ['POST', 'GET'])
 def containerRunning():
     hostname = socket.gethostname()
     return (f'its working {hostname}')
