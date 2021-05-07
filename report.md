@@ -71,4 +71,79 @@ ERROR test_app.py
 Exited with code exit status 2
 CircleCI received exit code 2
 
-hm.
+Ja försöker med requests..
+
+#!/bin/sh -eo pipefail
+flake8  --statistics
+pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /root/repo
+collecting ... collected 0 items / 1 error                                                    
+
+==================================== ERRORS ====================================
+_________________________ ERROR collecting test_app.py _________________________
+/usr/local/lib/python3.9/site-packages/urllib3/connection.py:169: in _new_conn
+    conn = connection.create_connection(
+/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py:96: in create_connection
+    raise err
+/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py:86: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py:699: in urlopen
+    httplib_response = self._make_request(
+/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py:394: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+/usr/local/lib/python3.9/site-packages/urllib3/connection.py:234: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/local/lib/python3.9/http/client.py:1253: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/local/lib/python3.9/http/client.py:1299: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/local/lib/python3.9/http/client.py:1248: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/local/lib/python3.9/http/client.py:1008: in _send_output
+    self.send(msg)
+/usr/local/lib/python3.9/http/client.py:948: in send
+    self.connect()
+/usr/local/lib/python3.9/site-packages/urllib3/connection.py:200: in connect
+    conn = self._new_conn()
+/usr/local/lib/python3.9/site-packages/urllib3/connection.py:181: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f613487ceb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.9/site-packages/requests/adapters.py:439: in send
+    resp = conn.urlopen(
+/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py:755: in urlopen
+    retries = retries.increment(
+/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py:574: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f613487ceb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+test_app.py:5: in <module>
+    class AppTester():
+test_app.py:6: in AppTester
+    t1 = requests.get("http://127.0.0.1")
+/usr/local/lib/python3.9/site-packages/requests/api.py:76: in get
+    return request('get', url, params=params, **kwargs)
+/usr/local/lib/python3.9/site-packages/requests/api.py:61: in request
+    return session.request(method=method, url=url, **kwargs)
+/usr/local/lib/python3.9/site-packages/requests/sessions.py:542: in request
+    resp = self.send(prep, **send_kwargs)
+/usr/local/lib/python3.9/site-packages/requests/sessions.py:655: in send
+    r = adapter.send(request, **kwargs)
+/usr/local/lib/python3.9/site-packages/requests/adapters.py:516: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f613487ceb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+=========================== short test summary info ============================
+ERROR test_app.py - requests.exceptions.ConnectionError: HTTPConnectionPool(h...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.54s ===============================
+
+Exited with code exit status 2
+CircleCI received exit code 2
