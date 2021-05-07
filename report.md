@@ -12,3 +12,4 @@ python --version finns inte så jag lägger till apk update && apk add python3 p
 sedan gör jag en git add * git commit -m "added Dockerfile" git push
 Så jag har gjort en dockerfile och någonting meningslöst i flask som visar kontainer id och /headers om den är ok kan användas för test senare
 Nu går jag in på circleCi och Set Up Project ci_inlamning1 det genereas ett yml jag får tänka lite på det så jag gör en test_app.py sålänge.
+Bråkar runt lite med circle ci svårt att få en alpine nu fungerade alpine med python:3-alpine nu saknas flake8 så jag lägger till den i requrements.txt
