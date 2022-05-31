@@ -1,5 +1,5 @@
-# import os
-# import subprocess
+import os
+import subprocess
 # from flask import render_template
 import socket
 from flask import Response, Request, Flask
