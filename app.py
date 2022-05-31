@@ -1,5 +1,5 @@
-import os
-import subprocess
+#import os
+#import subprocess
 # from flask import render_template
 import socket
 from flask import Response, Request, Flask
@@ -31,5 +31,3 @@ def headers():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
-
-    # i hate pep8..
