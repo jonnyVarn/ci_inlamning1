@@ -10,6 +10,7 @@ hostname = socket.gethostname()
 def testar():
     return 'ok'
 
+
 @app.route('/', methods=['POST', 'GET'])
 def container():
     return f'its working {hostname}'
