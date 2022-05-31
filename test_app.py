@@ -14,6 +14,5 @@ def test_home_page(client):
 
 def test_contanct_page(client):
     response = client.get("/") 
-    assert b"its" in response.data # noqa
-    assert b"working" in response.data # noqa
-        
+    assert b"its" in response.data
+    assert b"working" in response.data

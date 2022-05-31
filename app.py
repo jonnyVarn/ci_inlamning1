@@ -1,10 +1,5 @@
-#import os
-#import subprocess
-# from flask import render_template
 import socket
 from flask import Response, Request, Flask
-
-# from flask_api import status
 
 
 app = Flask(__name__)
@@ -14,7 +9,6 @@ hostname = socket.gethostname()
 @app.route('/test')
 def testar():
     return 'ok'
-
 
 @app.route('/', methods=['POST', 'GET'])
 def container():
